@@ -1,0 +1,93 @@
+* {
+    margin: 5;
+    padding: 2;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  main {
+    width: 80%;
+    margin: 15px auto 0;
+  }
+  
+  #userPost input[name="name"] {
+    grid-area: name;
+  }
+  
+  #userPost input[name="age"] {
+    grid-area: location;
+  }
+  
+  #userPost input[name="story"] {
+    grid-area: story;
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 90px;
+  }
+  
+  #userPost button {
+    grid-area: button;
+  }
+  
+  #userPost {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "name location"
+      "story story"
+      "button button";
+  }
+  
+  #userPost * {
+    margin: 7px;
+    padding: 5px;
+    font-size: 1.0rem;
+    border-radius: 10px;
+    /* transition: all 0.3s ease; */
+  }
+  
+  #userPost button {
+    outline: none;
+    background-color: #4796b8;
+    color: white;
+    border: 5px solid transparent;
+    cursor: pointer;
+  }
+  
+  #userPost input {
+    border: 3px solid #909090;
+    outline: none;
+  }
+
+  .but {
+    border: 3px solid #909090;
+    outline: none;
+    width: 197%;
+  }
+  
+  #userPost button:active {
+    border-color: #4796b8;
+  }
+  
+  .users {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: center; */
+    border: 2px solid rgb(102, 99, 99);
+    background-color: #ebebeb;
+    color: #2f2f2f;
+    border-radius: 15px;
+    overflow-wrap: break-word;
+  }
+  
+  .users div {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .users div * {
+    margin: 5px;
+  }

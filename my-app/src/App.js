@@ -1,7 +1,17 @@
 import React from "react"
 import { Box, Text, Button, ButtonGroup, Stack, Wrap, WrapItem } from "@chakra-ui/react"
+import React from 'react';
+import Home from './Home';
+import { Routes,Route, BrowserRouter as Router } from 'react-router-dom';
+import About from './Components/About';
+import MyComponent from './Search';
 
-export default function App(props) {
+
+
+import { useMemo } from "react";
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+
+function App(props) {
   return (
     <Box 
     display='flex'
@@ -30,3 +40,20 @@ export default function App(props) {
     </Box>
   )
 }
+    
+<div className="App">
+      <header className="App-header">
+        <p>
+          Welcome to Our Application
+        </p>
+
+      </header>
+      <Home></Home>
+
+      <br></br>
+      <Marker></Marker>
+      <MyComponent></MyComponent>
+    </div>
+
+
+export default App;
